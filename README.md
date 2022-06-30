@@ -6,15 +6,16 @@
 Video player made to check whether a veiwer has watched the playing video fully without skipping any parts of the video its also responsive to the screen size
 
 ## Components
-- Play button 
+### - Play button 
 controls play and pause of video a Timers which run side by side.
-- Rewind button 
+### - Rewind button 
 rewinds video by 10s
-- Progress bar 
+### - Progress bar 
 lets you seek through the video till wherever you have completed
-- Chapter Button
+### - Chapter Button
 acts as a bookmark so when you come back to watch the video the video playes from the previous timestamp. 
-- Conpleted button: disabled till video is completed
+### - Completed button
+disabled till video is completed
 
 
 ## Libraries 
