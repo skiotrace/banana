@@ -64,7 +64,7 @@ function PLayertrial() {
   const [Intervals, setIntervals] = useState(null);
   const [OpenModal, setOpenModal] = useState(false);
   const [HoldDuration, setHoldDuration] = useState();
-  const [TaskCompleted, setTaskCompleted] = useState(false);
+  const [TaskCompleted, setTaskCompleted] = useState(true);
   const [isSeeked, setisSeeked] = useState(false);
   const [loading, setLoading] = useState();
 
@@ -134,7 +134,7 @@ function PLayertrial() {
 
   const handleCompleted = () => {
     if (Timer >= HoldDuration) {
-      setTaskCompleted(true);
+      setTaskCompleted(false);
       setSwitch(true);
     }
   };
@@ -335,7 +335,8 @@ function PLayertrial() {
         <Button
           variant="contained"
           sx={{ pointerEvents: "none" }}
-          color={TaskCompleted ? "success" : "warning"}
+          color={"success"}
+          disabled={TaskCompleted}
         >
           Completed
         </Button>
