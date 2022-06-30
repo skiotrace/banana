@@ -232,7 +232,14 @@ function PLayertrial() {
   //-------------------------------------------------------------------------------
 
   return (
-    <Box width={"70%"} height="100%" bgcolor={"aliceblue"} padding="10px">
+    <Box
+      width={"70%"}
+      height="100%"
+      bgcolor={"aliceblue"}
+      justifyContent={"center"}
+      padding="10px"
+      mx={"15%"}
+    >
       <Box sx={{ pointerEvents: "none" }}>
         <Player ref={playerRef}>
           <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
@@ -281,15 +288,15 @@ function PLayertrial() {
           valueLabelDisplay="auto"
         />
       </Box>
-
       <Box
-        display={"flex"}
-        gap={"10%"}
         justifyContent="space-between"
         alignItems={"center"}
-        sx={{ mb: "10px" }}
+        sx={{
+          mb: "10px",
+          display: { xs: "inherit", sm: "inherit", md: "flex" },
+        }}
       >
-        <Button variant="contained" onClick={playPause} sx={{ mb: "10px" }}>
+        <Button variant="contained" onClick={playPause} sx={{}}>
           {Switch ? "play" : "pause"}
         </Button>
         <Fab
@@ -306,7 +313,7 @@ function PLayertrial() {
 
         <ButtonGroup
           marginLeft="10px"
-          sx={{ alignContent: "center", mb: "10px", mr: "5%" }}
+          sx={{ alignContent: "center", my: "10px", mr: "5%" }}
         >
           {chapters.map((e) => {
             return (
